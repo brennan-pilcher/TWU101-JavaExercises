@@ -8,8 +8,23 @@ package com.thoughtworks.tw101.exercises.exercise6;
 // * Orcs are named “Orc” and have 20 initial hitpoints
 // * Trolls are named “Troll”, have 40 hit points and only take half damage
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+        // yay, polymorphism!
+        ArrayList<Monster> monsters = new ArrayList<>();
+
+        monsters.add(new Orc());
+        monsters.add(new Troll());
+
+        for (Monster monster : monsters) {
+            monster.takeDamage(10);
+        }
+
+        for (Monster monster : monsters) {
+            monster.reportStatus();
+        }
 
     }
 }
