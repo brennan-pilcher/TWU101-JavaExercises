@@ -1,10 +1,13 @@
 package com.thoughtworks.tw101.exercises.exercise9;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
-    public String name;
-    public Node left, right;
+    private String name;
+    private Node left, right;
+    private List<String> names;
+
 
     public Node(String name) {
         this.name = name;
@@ -33,14 +36,20 @@ public class Node {
         }
     }
 
-    public void print () {
-        System.out.println("Node: " + name);
-        System.out.println("L: " + left.name);
-        System.out.println("R: " + right.name);
-        System.out.println("\n");
+    public void getName (Node node) {
+        if (node == null) {
+            return;
+        }
+
+        getName(node.left);
+        names.add(node.name);
+        getName(node.right);
     }
 
     public List<String> names() {
-        return null;
+        names = new ArrayList<>();
+
+        getName(this);
+        return names;
     }
 }
