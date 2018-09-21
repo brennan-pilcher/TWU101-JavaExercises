@@ -8,29 +8,21 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        Node root = new Node("Cecil");
-//
-//        root.add("Michelle");
-//        root.add("Bill");
-//        root.add("Jagruti");
-//        root.add("Tess");
-//        root.add("Sue-Ellen");
-//        root.add("Sara");
-//        root.add("Casey");
-//
-//        List<String> names = root.names();
-//
-//        for (String name : names) {
-//            System.out.println(name);
-//        }
+        Node root = new Node("Cecil");
 
-        Node root = new Node("B");
+        root.add("Michelle");
+        root.add("Bill");
+        root.add("Jagruti");
+        root.add("Tess");
+        root.add("Sue-Ellen");
+        root.add("Sara");
+        root.add("Casey");
 
-        root.add("A");
-        root.add("C");
-        root.add("D");
+        List<String> names = root.names();
 
-        root.print();
+        for (String name : names) {
+            System.out.println(name);
+        }
 
     }
 }
